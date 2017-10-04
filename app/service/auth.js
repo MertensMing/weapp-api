@@ -85,6 +85,9 @@ module.exports = app => {
         univId: 0,
         createAt: nowStr,
         updateAt: nowStr,
+        playerNum: 35,
+        enrollment: 2013,
+        position: 0,
       };
       const result = yield app.mysql.insert('user', row);
       row.id = result.insertId;
