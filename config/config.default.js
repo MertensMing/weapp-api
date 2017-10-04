@@ -29,6 +29,18 @@ module.exports = appInfo => {
     },
   };
 
+  config.mysql = {
+    client: {
+      host: '106.15.194.102',
+      port: '3306',
+      user: 'root',
+      password: 'root',
+      database: 'we_app_db',
+    },
+    app: true, // 是否加载到 app 上，默认开启
+    agent: false, // 是否加载到 agent 上，默认关闭
+  };
+
   config.security = {
     csrf: {
       ignoreJSON: true,
