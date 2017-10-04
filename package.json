@@ -4,8 +4,13 @@
   "description": "",
   "private": true,
   "dependencies": {
+    "dateformat": "^3.0.2",
     "egg": "^1.7.0",
-    "egg-scripts": "^1.1.1"
+    "egg-mysql": "^3.0.0",
+    "egg-qcloud-weapp-sdk": "^1.5.0",
+    "egg-redis": "^1.0.2",
+    "egg-scripts": "^1.1.1",
+    "node-qiniu": "^6.2.0"
   },
   "devDependencies": {
     "autod": "^2.9.0",
