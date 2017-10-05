@@ -39,7 +39,7 @@ module.exports = app => {
     * cacheUserInfo(key, value) {
       try {
         const string = JSON.stringify(value);
-        yield app.redis.set(key, string, 'EX', 60 * 60 * 2);
+        yield app.redis.set(key, string, 'EX', 60 * 60 * 24 * 7);
       } catch (err) {
         return null;
       }

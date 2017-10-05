@@ -8,7 +8,7 @@ module.exports = () => {
     if (ignore) {
       yield next;
     } else if (user) {
-      this.app.redis.set(sessionKey, user, 'EX', 60 * 60 * 2);
+      this.app.redis.set(sessionKey, user, 'EX', 60 * 60 * 24 * 7);
       yield next;
     } else {
       this.body = {
@@ -20,7 +20,6 @@ module.exports = () => {
   function matchPath(nowPath) {
     const paths = [
       /\/vertify$/,
-      /\/csrf$/,
     ];
     for (const path of paths) {
       const isMatch = new RegExp(path).test(nowPath.replace(/\?.*/g, ''));

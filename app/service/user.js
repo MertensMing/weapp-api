@@ -17,6 +17,7 @@ module.exports = app => {
             resolve(reply);
           });
       });
+      console.log('reply', reply);
       return reply;
     }
     * updateUser(openId, name, value) {

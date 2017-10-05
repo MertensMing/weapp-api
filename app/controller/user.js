@@ -1,13 +1,11 @@
 'use strict';
 
-const path = require('path');
-
 module.exports = app => {
   class UserController extends app.Controller {
     * upload() {
       const { ctx } = this;
       const stream = yield ctx.getFileStream();
-      const name = `weapp/${path.basename(stream.filename)}`;
+      const name = `weapp/img_${Date.now()}`;
       const reply = yield ctx.service.user.uploadImage(name, stream);
       if (reply.key) {
         ctx.body = reply.key;
